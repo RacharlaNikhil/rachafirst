@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+<title> Contact us </title>
+<link href="contact-us.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background-color: #f2f2f2;">
+ 
+<div class="container">
+    <div class="row">
+    <div class="column">
+      <img src="contact.png" style="width:100%">
+    </div>
+    <div class="column">
+      <h2 style="text-align: center;">Feed Back Form</h2>
+      <form name="myForm" onsubmit="return myFunction()" method="post" >
+        First Name :
+        <input type="text"  name="firstname" placeholder="Your name.">
+        Last Name :
+        <input type="text"  name="lastname" placeholder="Your last name.">
+        State :
+        <select  name="State">
+          <option value="Andhra Pradesh">Andhra Pradesh</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Karnataka">Karnataka</option>
+        </select>
+        Subject :
+        <textarea name="subject" placeholder="Type here" style="height:50px"></textarea>
+        Phone :
+        <input type="text"  name="number" placeholder="number"></br></br>
+        <input type="submit" value="submit">
+        <script>
+        function myFunction() {
+          var x = document.forms["myForm"]["firstname"].value;
+          var y = document.forms["myForm"]["number"].value;
+          var z = document.forms["myForm"]["subject"].value;
+          if(x =="" || y ==""||z=="")
+          {
+            alert("Please enter all the details");
+            return false;
+          }
+          else
+          {
+        alert("Your Responsive has been registered..!");
+        }
+      }
+        </script>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

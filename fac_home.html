@@ -1,0 +1,46 @@
+
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Homepage</title> 
+</head> 
+<body> 
+    <div > 
+        <h2>Home Page</h2> 
+    </div> 
+    <div> 
+   
+        <!-- Creating notification when the 
+                user logs in -->
+          
+        <!-- Accessible only to the users that 
+                have logged in already -->
+        <?php if (isset($_SESSION['success'])) : ?> 
+            <div class="error success" > 
+                <h3> 
+                    <?php
+                        echo $_SESSION['success'];  
+                        unset($_SESSION['success']); 
+                    ?> 
+                </h3> 
+            </div> 
+        <?php endif ?> 
+   
+        <!-- information of the user logged in -->
+        <!-- welcome message for the logged in user -->
+        <?php  if (isset($_SESSION['fac_id]')) : ?> 
+            <p> 
+                Welcome  
+                <strong> 
+                    <?php echo $_SESSION['fac_id']; ?> 
+                </strong> 
+            </p> 
+            <p>  
+                <a href="facultylogin.html" style="color: red;"> 
+                    Click here to Logout 
+                </a> 
+            </p> 
+        <?php endif ?> 
+    </div> 
+</body> 
+</html> 
